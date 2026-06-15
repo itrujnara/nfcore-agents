@@ -14,7 +14,7 @@
 This repository contains the official AI agent context files for nf-core pipelines. The repository aims to enable swift updates as the field evolves and the community discovers specific agent behaviour.
 
 ## Repository rules
-Adding or editing files in this repository requires approval from an nf-core core member and can only be done via pull requests.
+Adding or editing files in this repository requires approval from an nf-core core member (or maintainer with special permissions) and can only be done via pull requests.
 
 ## Files in this repository
 - `AGENTS.md`: main agent context file containing instructions for the nf-core pipeline template.
