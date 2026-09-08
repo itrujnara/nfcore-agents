@@ -103,7 +103,7 @@ This repository has at least 3 git branches: `main` (or `master`), `dev`, and `T
     - A commit **MAY** contain changes in multiple lines and files, as long as they have a shared purpose.
 - Commit title **SHOULD** be concise and written in imperative mood.
 - If the commit consists only of installing or updating an nf-core module or subworkflow, limit the commit title to `Install/update nf-core module/subworkflow {name}`.
-- If you have editted any Nextflow files, run `nextflow lint -format` for each. If any errors appear, resolve them and re-run the command.
+- If you have edited any Nextflow files, run `nextflow lint -format` for each. If any errors appear, resolve them and re-run the command.
 - Before each commit, you **MUST** stage changes and then run `prek`. Resolve all errors and all possible warnings. Repeat until there are no solvable outstanding issues.
 
 ## Push routine
