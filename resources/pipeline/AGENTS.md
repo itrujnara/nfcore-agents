@@ -129,6 +129,7 @@ This repository has at least 3 git branches: `main` (or `master`), `dev`, and `T
 - You should only push to GitHub after implementing some meaningful changes and if the code is working.
 - You **MUST** obtain permission from the user before pushing.
 - You **MUST NOT** force-push.
+    - You **MAY** use `--force-with-lease` **ONLY** if you have rewritten commit history.
     - If a push is rejected by the remote, notify the user and wait.
 - Before pushing, you **MUST** run `nf-core pipelines lint`, resolve all errors and all possible warnings. Repeat until there are no solvable outstanding issues.
 - If you are preparing a release (PR to main), use `nf-core pipelines lint --release` instead.
