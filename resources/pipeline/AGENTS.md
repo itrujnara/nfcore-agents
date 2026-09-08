@@ -4,7 +4,8 @@ This is the main AI context file for nf-core pipelines. All AI agents and coding
 
 ## Natural language
 All comments and documentation **MUST** be written in English with British spelling. Documentation files **SHOULD** additionally follow the style guide at https://nf-co.re/docs/developing/documentation/style-guide.
-Never use emdashes in prose text, be succinct and to the point. Avoid telltale LLM phrasing such as "Not X, but Y", and excessive use of bold formatting.
+
+Never use emdashes in prose text, be succinct and to the point. Avoid telltale LLM phrasing such as "Not X, but Y", and excessive use of bold formatting. Code (including quoted commands and scripts, but excluding comments) is not considered prose.
 
 ## Key nf-core terms
 - Module: a single process that achieves a single, well defined task (e.g. aligning reads to a genome)
@@ -99,12 +100,16 @@ This repository has at least 3 git branches: `main` (or `master`), `dev`, and `T
 
 ## Commit rules and routine
 - Each commit **SHOULD** contain one logical change.
+    - A commit **MAY** contain changes in multiple lines and files, as long as they have a shared purpose.
 - Commit title **SHOULD** be concise and written in imperative mood.
 - If the commit consists only of installing or updating an nf-core module or subworkflow, limit the commit title to `Install/update nf-core module/subworkflow {name}`.
 - Before each commit, you **MUST** stage changes and then run `prek`. Resolve all errors and all possible warnings. Repeat until there are no solvable outstanding issues.
 
 ## Push routine
 - You should only push to GitHub after implementing some meaningful changes and if the code is working.
+- You **MUST** obtain permission from the user before pushing.
+- You **MUST NOT** force-push.
+    - If a push is rejected by the remote, notify the user and wait.
 - Before pushing, you **MUST** run `nf-core pipelines lint`, resolve all errors and all possible warnings. Repeat until there are no solvable outstanding issues.
 - If you are preparing a release (PR to main), use `nf-core pipelines lint --release` instead.
 - You **MUST** also run `nf-test test tests/`. If the pipeline fails, resolve the underlying issues. If the test fails due to mismatching snapshots, update them if permitted (see "nf-test and testing" above). Otherwise, fix the issue that caused the unexpected change.
